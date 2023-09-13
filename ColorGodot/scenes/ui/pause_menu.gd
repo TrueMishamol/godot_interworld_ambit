@@ -1,13 +1,16 @@
 extends Control
 
 
+signal resume
+signal options
+
 
 func _on_resume_pressed():
-	pass # Replace with function body.
+	resume.emit()
 
 
 func _on_options_pressed():
-	pass # Replace with function body.
+	options.emit()
 
 
 func _on_quit_pressed():

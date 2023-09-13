@@ -6,6 +6,7 @@
 size = Vector2(1236, 670)
 
 [node name="MovableLevelBorders" type="PathFollow2D"]
+position = Vector2(640, 360)
 rotates = false
 script = ExtResource("1_l0hxf")
 
@@ -13,12 +14,22 @@ script = ExtResource("1_l0hxf")
 
 [node name="Camera2D" type="Camera2D" parent="ScreenBorder"]
 
-[node name="Area2D" type="Area2D" parent="ScreenBorder"]
+[node name="AreaPlayer" type="Area2D" parent="ScreenBorder"]
 collision_layer = 128
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenBorder/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenBorder/AreaPlayer"]
 shape = SubResource("RectangleShape2D_ooqtn")
 debug_color = Color(0, 0.6, 0.701961, 0)
 
-[connection signal="body_exited" from="ScreenBorder/Area2D" to="." method="_on_area_2d_body_exited"]
+[node name="AreaEnemy" type="Area2D" parent="ScreenBorder"]
+collision_layer = 128
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenBorder/AreaEnemy"]
+shape = SubResource("RectangleShape2D_ooqtn")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[connection signal="body_exited" from="ScreenBorder/AreaPlayer" to="." method="_on_area_player_exited"]
+[connection signal="body_entered" from="ScreenBorder/AreaEnemy" to="." method="_on_area_enemy_body_entered"]
+[connection signal="body_exited" from="ScreenBorder/AreaEnemy" to="." method="_on_area_enemy_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bw4w5u3hv70j0"]
+[gd_scene load_steps=10 format=3 uid="uid://bw4w5u3hv70j0"]
 
 [ext_resource type="Theme" uid="uid://d2p58ngrkwytp" path="res://visual/theme/puffed_bun.tres" id="1_5tikq"]
 [ext_resource type="Script" path="res://scenes/ui/pause_menu.gd" id="1_rg50p"]
@@ -9,8 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://x81fwns1bn7t" path="res://visual/ui/pause_menu_button_2_pressed.png" id="6_x2igm"]
 [ext_resource type="Texture2D" uid="uid://b5pbuhwy2c23m" path="res://visual/ui/pause_menu_button_3.png" id="7_hek1w"]
 [ext_resource type="Texture2D" uid="uid://bemplgjqyijgf" path="res://visual/ui/pause_menu_button_3_pressed.png" id="8_6e6u7"]
-[ext_resource type="Texture2D" uid="uid://dqk825atnwvjk" path="res://visual/ui/play_button.png" id="9_5m04o"]
-[ext_resource type="Texture2D" uid="uid://dhg4dnhd143hg" path="res://visual/ui/play_button_pressed.png" id="10_403a4"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -40,24 +38,6 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_5tikq")
-
-[node name="TmpColorRect2" type="ColorRect" parent="PauseMenu"]
-layout_mode = 0
-offset_left = 525.0
-offset_top = -314.0
-offset_right = 593.0
-offset_bottom = -242.0
-color = Color(0.211765, 0.215686, 0.254902, 1)
-
-[node name="PlayButton" type="TextureButton" parent="PauseMenu/TmpColorRect2"]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 3.0
-offset_right = 65.0
-offset_bottom = 69.0
-texture_normal = ExtResource("9_5m04o")
-texture_pressed = ExtResource("10_403a4")
-texture_disabled = ExtResource("10_403a4")
 
 [node name="PauseMenuOutline" type="Sprite2D" parent="PauseMenu"]
 texture = ExtResource("2_m0nub")

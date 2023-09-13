@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://sahjam5ngmdg"]
+[gd_scene load_steps=12 format=3 uid="uid://sahjam5ngmdg"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_4cg4s"]
 [ext_resource type="PackedScene" uid="uid://edy4wxcyhdgu" path="res://scenes/player/player.tscn" id="1_6pp8f"]
 [ext_resource type="PackedScene" uid="uid://cxp3s6hkpg1a5" path="res://scenes/enviroment/activator.tscn" id="2_cgv7t"]
+[ext_resource type="PackedScene" uid="uid://ce8pahnosn5rr" path="res://scenes/managers/game_pause.tscn" id="2_d1a2v"]
 [ext_resource type="Texture2D" uid="uid://2ttbmgopuocb" path="res://visual/entities/activator.png" id="4_q6qvv"]
 [ext_resource type="Texture2D" uid="uid://6jmn8a0gpdk2" path="res://visual/entities/plant.png" id="5_5aegt"]
 [ext_resource type="Texture2D" uid="uid://b5cvjxixt6li8" path="res://visual/entities/item.png" id="6_cmel4"]
@@ -19,6 +20,8 @@ point_count = 11
 [node name="Level" type="Node2D"]
 position = Vector2(642, 364)
 script = ExtResource("1_4cg4s")
+
+[node name="GamePause" parent="." instance=ExtResource("2_d1a2v")]
 
 [node name="Enviroment" type="Node2D" parent="."]
 
@@ -90,3 +93,5 @@ position = Vector2(105, -4)
 [connection signal="defeated" from="Player" to="." method="_on_player_defeated"]
 [connection signal="player_fell_off_the_screen" from="Path2D/MovableLevelBorders" to="." method="_on_movable_level_borders_player_fell_off_the_screen"]
 [connection signal="player_fell_off_the_screen" from="Path2D/MovableLevelBorders" to="Player" method="_on_movable_level_borders_player_fell_off_the_screen"]
+[connection signal="game_paused" from="IngameUI" to="GamePause" method="_on_ingame_ui_game_paused"]
+[connection signal="game_unpaused" from="IngameUI" to="GamePause" method="_on_ingame_ui_game_unpaused"]

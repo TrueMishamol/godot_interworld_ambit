@@ -1,16 +1,13 @@
 extends Node2D
 
 
-@onready var game_over_screen = $IngameUI/GameOverScreen
+@onready var ingame_ui = $IngameUI
+@onready var game_over = ingame_ui.game_over
 
 
 var score := 0
 var best_score
 
-#func _on_movable_level_borders_player_fell_off_the_screen(body):
-#	print("Game over, ", body)
-#	remove_child(body)
-	
 
 func  _ready():
 	var save_file = FileAccess.open("user://save.data",FileAccess.READ)
@@ -27,12 +24,12 @@ func save_game():
 
 
 func _on_player_defeated():
-	game_over_screen.set_score(score)
+	game_over.set_score(score)
 	update_best_score()
-	game_over_screen.set_best_score(best_score)
+	game_over.set_best_score(best_score)
 	
 	await get_tree().create_timer(1).timeout
-	game_over_screen.visible = true
+	ingame_ui.game_over_ui_show()
 
 func update_best_score():
 	if score > best_score:

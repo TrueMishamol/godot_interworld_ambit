@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnwcq6akkp0hu"]
+
+[ext_resource type="Texture2D" uid="uid://delxc2vcfuk0x" path="res://visual/entities/enemy.png" id="1_2p61e"]
+[ext_resource type="Script" path="res://scenes/enemy/enemy.gd" id="1_fni8h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qxwn1"]
+radius = 1467.92
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 230
+script = ExtResource("1_fni8h")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 4)
+rotation = -0.976727
+polygon = PackedVector2Array(-37, 6, 27, -34, 34, 44)
+
+[node name="Enemy" type="Sprite2D" parent="CollisionPolygon2D"]
+texture = ExtResource("1_2p61e")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_qxwn1")
+debug_color = Color(0.92549, 0.447059, 0.760784, 0.0588235)
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
