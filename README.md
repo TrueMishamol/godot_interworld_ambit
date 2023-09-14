@@ -1,2 +1,3 @@
-# Color
- Color - Unity 2D game in hyper-casual genre
+# Slippy Ambit
+
+Slippy Ambit - don't fly out! Godot 2D project

@@ -1,0 +1,147 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt30mlesbamuf"]
+
+[ext_resource type="Theme" uid="uid://d2p58ngrkwytp" path="res://visual/theme/puffed_bun.tres" id="1_55xp5"]
+[ext_resource type="Texture2D" uid="uid://bg6c3d5odifpt" path="res://visual/ui/pause_menu_button_1.png" id="2_8gwno"]
+[ext_resource type="Texture2D" uid="uid://8d16qogvh3ti" path="res://visual/ui/pause_menu_button_1_pressed.png" id="3_7nteh"]
+[ext_resource type="Texture2D" uid="uid://5umdrgnfapwd" path="res://visual/ui/mishamol.svg" id="3_w51kw"]
+[ext_resource type="Script" path="res://scenes/ui/scene_switch_button.gd" id="4_qkecg"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_55xp5")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SlippyAmbit" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.5
+offset_top = -288.0
+offset_right = 179.5
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 96
+text = "Slippy Ambit
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dont" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.5
+offset_top = -213.0
+offset_right = 137.5
+offset_bottom = -145.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 55
+text = "don't fly out!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SceneSwitchButton" type="TextureButton" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.5
+offset_top = -33.0
+offset_right = 146.5
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_55xp5")
+texture_normal = ExtResource("2_8gwno")
+texture_pressed = ExtResource("3_7nteh")
+texture_disabled = ExtResource("3_7nteh")
+script = ExtResource("4_qkecg")
+level_path = "res://scenes/levels/menu/menu_level_select.tscn"
+
+[node name="Label" type="Label" parent="Control/SceneSwitchButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mishamol" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = 252.0
+offset_right = 189.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MadeBy" type="Label" parent="Control/Mishamol"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -218.0
+offset_top = -46.0
+offset_right = -52.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 36
+text = "made by"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mishamol" type="Sprite2D" parent="Control/Mishamol"]
+position = Vector2(240, 18)
+texture = ExtResource("3_w51kw")
+
+[node name="LinkButton" type="LinkButton" parent="Control/Mishamol/Mishamol"]
+offset_left = -127.0
+offset_top = -27.0
+offset_right = 135.0
+offset_bottom = 38.0
+theme = ExtResource("1_55xp5")
+text = "            "
+underline = 1
+uri = "https://mishamol.ru/"
+
+[connection signal="pressed" from="Control/SceneSwitchButton" to="Control/SceneSwitchButton" method="_on_pressed" flags=18]

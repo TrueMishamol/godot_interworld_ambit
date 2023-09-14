@@ -1,0 +1,102 @@
+[gd_scene load_steps=13 format=3 uid="uid://sahjam5ngmdg"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_4cg4s"]
+[ext_resource type="PackedScene" uid="uid://edy4wxcyhdgu" path="res://scenes/player/player.tscn" id="1_6pp8f"]
+[ext_resource type="PackedScene" uid="uid://cxp3s6hkpg1a5" path="res://scenes/enviroment/activator.tscn" id="2_cgv7t"]
+[ext_resource type="PackedScene" uid="uid://ce8pahnosn5rr" path="res://scenes/managers/game_pause.tscn" id="2_d1a2v"]
+[ext_resource type="PackedScene" uid="uid://cshmhfi1bmqqp" path="res://scenes/managers/game_over.tscn" id="3_66rhy"]
+[ext_resource type="Texture2D" uid="uid://2ttbmgopuocb" path="res://visual/entities/activator.png" id="4_q6qvv"]
+[ext_resource type="Texture2D" uid="uid://6jmn8a0gpdk2" path="res://visual/entities/plant.png" id="5_5aegt"]
+[ext_resource type="Texture2D" uid="uid://b5cvjxixt6li8" path="res://visual/entities/item.png" id="6_cmel4"]
+[ext_resource type="PackedScene" uid="uid://c6ybtfco3lbt2" path="res://scenes/enviroment/movable_level_borders.tscn" id="7_n7bo7"]
+[ext_resource type="PackedScene" uid="uid://l40hahm7j6l" path="res://scenes/ui/ingame_ui.tscn" id="9_1w5ou"]
+[ext_resource type="PackedScene" uid="uid://cnwcq6akkp0hu" path="res://scenes/enemy/enemy.tscn" id="10_ieqpx"]
+
+[sub_resource type="Curve2D" id="Curve2D_na6ig"]
+_data = {
+"points": PackedVector2Array(-17.9756, 30.5025, 17.9756, -30.5025, -483, -42, -316, -28, 316, 28, 84, -152, -144, -228, 144, 228, 508, 311, -156, -4, 156, 4, 807, 571, 0, 0, 0, 0, 1353, 483, 484, -8, -484, 8, 354, 1135, -4, -308, 4, 308, -581, 541, 0, 0, 0, 0, 1338, -416, 308, -132, -308, 132, -522, -792, -92, -264, 92, 264, -885, -67, 0, 0, 0, 0, -483, -42)
+}
+point_count = 11
+
+[node name="Level" type="Node2D"]
+position = Vector2(642, 364)
+script = ExtResource("1_4cg4s")
+
+[node name="GamePause" parent="." instance=ExtResource("2_d1a2v")]
+
+[node name="GameOver" parent="." instance=ExtResource("3_66rhy")]
+
+[node name="IngameUI" parent="." instance=ExtResource("9_1w5ou")]
+
+[node name="Player" parent="." instance=ExtResource("1_6pp8f")]
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(481, 38)
+curve = SubResource("Curve2D_na6ig")
+
+[node name="MovableLevelBorders" parent="Path2D" instance=ExtResource("7_n7bo7")]
+unique_name_in_owner = true
+position = Vector2(-483, -42)
+
+[node name="Enviroment" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enviroment" instance=ExtResource("10_ieqpx")]
+position = Vector2(1354, 617)
+
+[node name="Enemy2" parent="Enviroment" instance=ExtResource("10_ieqpx")]
+position = Vector2(725, 835)
+
+[node name="Activator" parent="Enviroment" instance=ExtResource("2_cgv7t")]
+position = Vector2(-532, 222)
+
+[node name="Activator3" parent="Enviroment" instance=ExtResource("2_cgv7t")]
+position = Vector2(44, -270)
+
+[node name="Activator4" parent="Enviroment" instance=ExtResource("2_cgv7t")]
+position = Vector2(105, -4)
+
+[node name="Plant" type="Sprite2D" parent="Enviroment"]
+position = Vector2(185, 242)
+texture = ExtResource("5_5aegt")
+
+[node name="Plant2" type="Sprite2D" parent="Enviroment"]
+position = Vector2(228, 178)
+texture = ExtResource("5_5aegt")
+
+[node name="Plant3" type="Sprite2D" parent="Enviroment"]
+position = Vector2(267, 260)
+texture = ExtResource("5_5aegt")
+
+[node name="Item" type="Sprite2D" parent="Enviroment"]
+position = Vector2(730, -439)
+texture = ExtResource("6_cmel4")
+
+[node name="Plant4" type="Sprite2D" parent="Enviroment"]
+position = Vector2(1243, 687)
+texture = ExtResource("5_5aegt")
+
+[node name="Plant5" type="Sprite2D" parent="Enviroment"]
+position = Vector2(1126, 698)
+texture = ExtResource("5_5aegt")
+
+[node name="Plant6" type="Sprite2D" parent="Enviroment"]
+position = Vector2(1243, 748)
+texture = ExtResource("5_5aegt")
+
+[node name="Plant7" type="Sprite2D" parent="Enviroment"]
+position = Vector2(1272, 819)
+texture = ExtResource("5_5aegt")
+
+[node name="Activator2" type="Sprite2D" parent="Enviroment"]
+position = Vector2(2195, -442)
+texture = ExtResource("4_q6qvv")
+
+[node name="Item2" type="Sprite2D" parent="Enviroment"]
+position = Vector2(1984, 851)
+texture = ExtResource("6_cmel4")
+
+[node name="Enemy" parent="." instance=ExtResource("10_ieqpx")]
+position = Vector2(1134, 532)
+
+[node name="Enemy2" parent="." instance=ExtResource("10_ieqpx")]
+position = Vector2(1242, 572)
