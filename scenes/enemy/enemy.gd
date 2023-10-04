@@ -39,7 +39,7 @@ func  movement(delta):
 			
 		move_and_slide()
 		
-		# rotate
+		# Rotate
 		look_at(player.global_position)
 
 
