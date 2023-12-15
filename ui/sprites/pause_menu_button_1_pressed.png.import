@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clu5i7lca6l47"
-path="res://.godot/imported/controller_right_pressed.png-0cb23068b7605d14e41550c091f28fc7.ctex"
+uid="uid://8d16qogvh3ti"
+path="res://.godot/imported/pause_menu_button_1_pressed.png-a55a925580bc8169d95a7b16890d690e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://visual/ui/controller_right_pressed.png"
-dest_files=["res://.godot/imported/controller_right_pressed.png-0cb23068b7605d14e41550c091f28fc7.ctex"]
+source_file="res://ui/sprites/pause_menu_button_1_pressed.png"
+dest_files=["res://.godot/imported/pause_menu_button_1_pressed.png-a55a925580bc8169d95a7b16890d690e.ctex"]
 
 [params]
 

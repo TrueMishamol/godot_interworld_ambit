@@ -1,3 +1,3 @@
-# Slippy Ambit
+# Interworld Ambit
 
-Slippy Ambit - don't fly out! Godot 2D project
+Interworld Ambit - Godot 2D project

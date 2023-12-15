@@ -1,10 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://dt30mlesbamuf"]
 
 [ext_resource type="Theme" uid="uid://d2p58ngrkwytp" path="res://visual/theme/puffed_bun.tres" id="1_55xp5"]
-[ext_resource type="Texture2D" uid="uid://bg6c3d5odifpt" path="res://visual/ui/pause_menu_button_1.png" id="2_8gwno"]
-[ext_resource type="Texture2D" uid="uid://8d16qogvh3ti" path="res://visual/ui/pause_menu_button_1_pressed.png" id="3_7nteh"]
-[ext_resource type="Texture2D" uid="uid://5umdrgnfapwd" path="res://visual/ui/mishamol.svg" id="3_w51kw"]
+[ext_resource type="Texture2D" uid="uid://bg6c3d5odifpt" path="res://ui/sprites/pause_menu_button_1.png" id="2_8gwno"]
+[ext_resource type="Texture2D" uid="uid://8d16qogvh3ti" path="res://ui/sprites/pause_menu_button_1_pressed.png" id="3_7nteh"]
+[ext_resource type="Texture2D" uid="uid://5umdrgnfapwd" path="res://ui/sprites/mishamol.svg" id="3_w51kw"]
 [ext_resource type="Script" path="res://scenes/ui/scene_switch_button.gd" id="4_qkecg"]
+
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

@@ -5,7 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bksr7xyasmmpp" path="res://scenes/ui/options_menu.tscn" id="5_3c70s"]
 [ext_resource type="PackedScene" uid="uid://furbuj34t38t" path="res://scenes/ui/game_over_screen.tscn" id="13_tmpf0"]
 [ext_resource type="PackedScene" uid="uid://bw4w5u3hv70j0" path="res://scenes/ui/pause_menu.tscn" id="14_j7i7s"]
-[ext_resource type="Texture2D" uid="uid://c0huryriawnve" path="res://visual/ui/screen_border.png" id="15_ien1g"]
+[ext_resource type="Texture2D" uid="uid://c0huryriawnve" path="res://ui/sprites/screen_border.png" id="15_ien1g"]
+
 
 [node name="IngameUI" type="CanvasLayer"]
 process_mode = 3

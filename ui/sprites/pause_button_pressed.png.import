@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diowaaftvieio"
-path="res://.godot/imported/controller_interact.png-939830fd08fc962f90c01caa13b73294.ctex"
+uid="uid://ds23n5f1x8lrx"
+path="res://.godot/imported/pause_button_pressed.png-3f250d3f1e68cc5b04848ee7b5b91d67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://visual/ui/controller_interact.png"
-dest_files=["res://.godot/imported/controller_interact.png-939830fd08fc962f90c01caa13b73294.ctex"]
+source_file="res://ui/sprites/pause_button_pressed.png"
+dest_files=["res://.godot/imported/pause_button_pressed.png-3f250d3f1e68cc5b04848ee7b5b91d67.ctex"]
 
 [params]
 
