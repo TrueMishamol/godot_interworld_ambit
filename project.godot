@@ -10,15 +10,19 @@ config_version=5
 
 [application]
 
-config/name="Slippy Ambit"
+config/name="Interworld Ambit"
 config/description="Slippy Ambit - don't fly out!"
-run/main_scene="res://scenes/levels/menu/menu_main_menu.tscn"
+run/main_scene="res://levels/menu/menu_main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0.211765, 0.215686, 0.254902, 1)
 boot_splash/show_image=false
 boot_splash/image="res://ui/interworld_ambit.png"
 boot_splash/fullsize=false
 config/icon="res://ui/interworld_ambit.png"
+
+[autoload]
+
+ApplicationControls="*res://scripts/application_controls.gd"
 
 [display]
 
@@ -30,8 +34,8 @@ window/stretch/aspect="expand"
 [file_customization]
 
 folder_colors={
+"res://levels/": "purple",
 "res://scenes/": "blue",
-"res://scenes/levels/": "teal",
 "res://scripts/": "green",
 "res://ui/": "yellow",
 "res://visual/": "orange"

@@ -1,7 +1,11 @@
 extends Label
 
 
-var text_variants := ["text1", "text2", "text3"]
+var text_variants := [
+	"don't fly out!",
+	"slippery slippy",
+	"interworld danger!",
+	]
 
 
 func _ready():
