@@ -10,16 +10,16 @@ func _ready():
 	
 
 func _on_ingame_ui_game_paused():
-	pause_game()
+	_pause_game()
 
 
 func _on_ingame_ui_game_unpaused():
-	run_game()
+	_run_game()
 
 
-func pause_game():
+func _pause_game():
 	get_tree().set_deferred("paused", true)
 	
 	
-func run_game():
+func _run_game():
 	get_tree().set_deferred("paused", false)

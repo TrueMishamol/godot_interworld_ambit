@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://dny75u2i3tq8w"]
 
 [ext_resource type="Texture2D" uid="uid://b3psjlenre31n" path="res://ui/sprites/pause_button.png" id="1_n0oek"]
-[ext_resource type="Script" path="res://scenes/ui/controls_ui.gd" id="1_p8hgk"]
+[ext_resource type="Script" path="res://nodes/ui/controls_ui.gd" id="1_p8hgk"]
 [ext_resource type="Texture2D" uid="uid://ds23n5f1x8lrx" path="res://ui/sprites/pause_button_pressed.png" id="2_7tgkg"]
 [ext_resource type="Texture2D" uid="uid://bxr3rjrekdjcd" path="res://ui/sprites/controller_down.png" id="3_tdifx"]
 [ext_resource type="Texture2D" uid="uid://c3qlf2m15se3j" path="res://ui/sprites/controller_down_pressed.png" id="4_q80wk"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://i5pijbw66nok" path="res://ui/sprites/controller_up_pressed.png" id="10_qugn7"]
 [ext_resource type="Texture2D" uid="uid://diowaaftvieio" path="res://ui/sprites/controller_interact.png" id="11_msqd7"]
 [ext_resource type="Texture2D" uid="uid://dpvf7pgvxyvcg" path="res://ui/sprites/controller_interact_pressed.png" id="12_x3s5u"]
+
 
 [node name="ControlsUI" type="Control"]
 layout_mode = 3

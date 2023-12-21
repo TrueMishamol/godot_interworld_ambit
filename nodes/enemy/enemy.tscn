@@ -1,7 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cnwcq6akkp0hu"]
 
 [ext_resource type="Texture2D" uid="uid://delxc2vcfuk0x" path="res://visual/entities/enemy.png" id="1_2p61e"]
-[ext_resource type="Script" path="res://scenes/enemy/enemy.gd" id="1_fni8h"]
+[ext_resource type="Script" path="res://nodes/enemy/enemy.gd" id="1_fni8h"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qxwn1"]
 radius = 1467.92

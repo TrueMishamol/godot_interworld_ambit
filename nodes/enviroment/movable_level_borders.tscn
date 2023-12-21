@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6ybtfco3lbt2"]
 
-[ext_resource type="Script" path="res://scenes/enviroment/movable_level_borders.gd" id="1_l0hxf"]
+[ext_resource type="Script" path="res://nodes/enviroment/movable_level_borders.gd" id="1_l0hxf"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ooqtn"]
 size = Vector2(1236, 670)

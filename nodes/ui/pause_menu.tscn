@@ -1,15 +1,15 @@
 [gd_scene load_steps=11 format=3 uid="uid://bw4w5u3hv70j0"]
 
 [ext_resource type="Theme" uid="uid://d2p58ngrkwytp" path="res://visual/theme/puffed_bun.tres" id="1_5tikq"]
-[ext_resource type="Script" path="res://scenes/ui/pause_menu.gd" id="1_rg50p"]
-[ext_resource type="Texture2D" uid="uid://cme0dp0oa7q7l" path="res://visual/ui/pause_menu_outline.png" id="2_m0nub"]
-[ext_resource type="Texture2D" uid="uid://bg6c3d5odifpt" path="res://visual/ui/pause_menu_button_1.png" id="3_gwmq8"]
-[ext_resource type="Texture2D" uid="uid://8d16qogvh3ti" path="res://visual/ui/pause_menu_button_1_pressed.png" id="4_j8p6m"]
-[ext_resource type="Texture2D" uid="uid://c2wodoi6746bm" path="res://visual/ui/pause_menu_button_2.png" id="5_03vas"]
-[ext_resource type="Texture2D" uid="uid://x81fwns1bn7t" path="res://visual/ui/pause_menu_button_2_pressed.png" id="6_x2igm"]
-[ext_resource type="Texture2D" uid="uid://b5pbuhwy2c23m" path="res://visual/ui/pause_menu_button_3.png" id="7_hek1w"]
-[ext_resource type="Texture2D" uid="uid://bemplgjqyijgf" path="res://visual/ui/pause_menu_button_3_pressed.png" id="8_6e6u7"]
-[ext_resource type="Script" path="res://scenes/ui/scene_switch_button.gd" id="10_rgb34"]
+[ext_resource type="Script" path="res://nodes/ui/pause_menu.gd" id="1_rg50p"]
+[ext_resource type="Texture2D" uid="uid://cme0dp0oa7q7l" path="res://ui/sprites/pause_menu_outline.png" id="2_m0nub"]
+[ext_resource type="Texture2D" uid="uid://bg6c3d5odifpt" path="res://ui/sprites/pause_menu_button_1.png" id="3_gwmq8"]
+[ext_resource type="Texture2D" uid="uid://8d16qogvh3ti" path="res://ui/sprites/pause_menu_button_1_pressed.png" id="4_j8p6m"]
+[ext_resource type="Texture2D" uid="uid://c2wodoi6746bm" path="res://ui/sprites/pause_menu_button_2.png" id="5_03vas"]
+[ext_resource type="Texture2D" uid="uid://x81fwns1bn7t" path="res://ui/sprites/pause_menu_button_2_pressed.png" id="6_x2igm"]
+[ext_resource type="Texture2D" uid="uid://b5pbuhwy2c23m" path="res://ui/sprites/pause_menu_button_3.png" id="7_hek1w"]
+[ext_resource type="Texture2D" uid="uid://bemplgjqyijgf" path="res://ui/sprites/pause_menu_button_3_pressed.png" id="8_6e6u7"]
+[ext_resource type="Script" path="res://nodes/ui/scene_switch_button.gd" id="10_rgb34"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -116,7 +116,7 @@ texture_normal = ExtResource("7_hek1w")
 texture_pressed = ExtResource("8_6e6u7")
 texture_disabled = ExtResource("8_6e6u7")
 script = ExtResource("10_rgb34")
-level_path = "res://scenes/levels/menu/menu_level_select.tscn"
+level_path = "res://levels/menu/menu_level_select.tscn"
 
 [node name="Label" type="Label" parent="PauseMenu/Quit"]
 layout_mode = 1

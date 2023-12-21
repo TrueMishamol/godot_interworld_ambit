@@ -1,11 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://c3h4huvird77m"]
 
-[ext_resource type="PackedScene" uid="uid://c6ybtfco3lbt2" path="res://scenes/enviroment/movable_level_borders.tscn" id="1_2socu"]
-[ext_resource type="PackedScene" uid="uid://ce8pahnosn5rr" path="res://scenes/managers/game_pause.tscn" id="1_s688o"]
-[ext_resource type="PackedScene" uid="uid://l40hahm7j6l" path="res://scenes/ui/ingame_ui.tscn" id="2_7cm1u"]
-[ext_resource type="PackedScene" uid="uid://cshmhfi1bmqqp" path="res://scenes/managers/game_over.tscn" id="2_tlajo"]
-[ext_resource type="PackedScene" uid="uid://edy4wxcyhdgu" path="res://scenes/player/player.tscn" id="4_ycgks"]
-[ext_resource type="PackedScene" uid="uid://cnwcq6akkp0hu" path="res://scenes/enemy/enemy.tscn" id="5_sjwnx"]
+[ext_resource type="PackedScene" uid="uid://c6ybtfco3lbt2" path="res://nodes/enviroment/movable_level_borders.tscn" id="1_2socu"]
+[ext_resource type="PackedScene" uid="uid://ce8pahnosn5rr" path="res://nodes/managers/game_pause.tscn" id="1_s688o"]
+[ext_resource type="PackedScene" uid="uid://l40hahm7j6l" path="res://nodes/ui/ingame_ui.tscn" id="2_7cm1u"]
+[ext_resource type="PackedScene" uid="uid://cshmhfi1bmqqp" path="res://nodes/managers/game_over.tscn" id="2_tlajo"]
+[ext_resource type="PackedScene" uid="uid://edy4wxcyhdgu" path="res://nodes/player/player.tscn" id="4_ycgks"]
+[ext_resource type="PackedScene" uid="uid://cnwcq6akkp0hu" path="res://nodes/enemy/enemy.tscn" id="5_sjwnx"]
+
 
 [sub_resource type="Curve2D" id="Curve2D_3jxmn"]
 _data = {

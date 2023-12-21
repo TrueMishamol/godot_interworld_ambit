@@ -46,6 +46,6 @@ func die():
 	queue_free()
 
 
-func _on_player_fell_off_the_screen(body):
+func _on_player_fell_off_the_screen(_body):
 	die()
 

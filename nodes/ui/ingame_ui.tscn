@@ -1,12 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://l40hahm7j6l"]
 
-[ext_resource type="Script" path="res://scenes/ui/ingame_ui.gd" id="1_hqhek"]
-[ext_resource type="PackedScene" uid="uid://dny75u2i3tq8w" path="res://scenes/ui/controls_ui.tscn" id="2_txoh5"]
-[ext_resource type="PackedScene" uid="uid://bksr7xyasmmpp" path="res://scenes/ui/options_menu.tscn" id="5_3c70s"]
-[ext_resource type="PackedScene" uid="uid://furbuj34t38t" path="res://scenes/ui/game_over_screen.tscn" id="13_tmpf0"]
-[ext_resource type="PackedScene" uid="uid://bw4w5u3hv70j0" path="res://scenes/ui/pause_menu.tscn" id="14_j7i7s"]
+[ext_resource type="Script" path="res://nodes/ui/ingame_ui.gd" id="1_hqhek"]
+[ext_resource type="PackedScene" uid="uid://dny75u2i3tq8w" path="res://nodes/ui/controls_ui.tscn" id="2_txoh5"]
+[ext_resource type="PackedScene" uid="uid://bksr7xyasmmpp" path="res://nodes/ui/options_menu.tscn" id="5_3c70s"]
+[ext_resource type="PackedScene" uid="uid://furbuj34t38t" path="res://nodes/ui/game_over_menu.tscn" id="13_tmpf0"]
+[ext_resource type="PackedScene" uid="uid://bw4w5u3hv70j0" path="res://nodes/ui/pause_menu.tscn" id="14_j7i7s"]
 [ext_resource type="Texture2D" uid="uid://c0huryriawnve" path="res://ui/sprites/screen_border.png" id="15_ien1g"]
-
 
 [node name="IngameUI" type="CanvasLayer"]
 process_mode = 3
@@ -43,6 +42,5 @@ position = Vector2(640, 360)
 texture = ExtResource("15_ien1g")
 
 [connection signal="game_paused" from="Controls" to="." method="_on_controls_game_paused"]
-[connection signal="retry" from="GameOver" to="." method="_on_game_over_retry"]
 [connection signal="options" from="Pause" to="." method="_on_pause_menu_options"]
 [connection signal="resume" from="Pause" to="." method="_on_pause_menu_resume"]
