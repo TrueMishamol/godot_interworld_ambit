@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Interworld Ambit"
 config/description="Slippy Ambit - don't fly out!"
+config/version="0.3.0"
 run/main_scene="res://levels/menu/menu_main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0.211765, 0.215686, 0.254902, 1)
