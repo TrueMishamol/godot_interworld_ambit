@@ -1,0 +1,92 @@
+[gd_scene load_steps=14 format=3 uid="uid://dny75u2i3tq8w"]
+
+[ext_resource type="Script" path="res://nodes/ui/scripts/gui_sensor_buttons.gd" id="1_7ra7k"]
+[ext_resource type="Texture2D" uid="uid://b3psjlenre31n" path="res://ui/sprites/pause_button.png" id="2_i1bro"]
+[ext_resource type="Texture2D" uid="uid://ds23n5f1x8lrx" path="res://ui/sprites/pause_button_pressed.png" id="3_x5jk1"]
+[ext_resource type="Texture2D" uid="uid://bxr3rjrekdjcd" path="res://ui/sprites/controller_down.png" id="4_gg8gu"]
+[ext_resource type="Texture2D" uid="uid://c3qlf2m15se3j" path="res://ui/sprites/controller_down_pressed.png" id="5_4uu4j"]
+[ext_resource type="Texture2D" uid="uid://cr5dc5jnqw2tk" path="res://ui/sprites/controller_left.png" id="6_xqvn5"]
+[ext_resource type="Texture2D" uid="uid://iyldkvbcpyq4" path="res://ui/sprites/controller_left_pressed.png" id="7_gj2ts"]
+[ext_resource type="Texture2D" uid="uid://bpf68uvbr1xdj" path="res://ui/sprites/controller_right.png" id="8_wkabg"]
+[ext_resource type="Texture2D" uid="uid://clu5i7lca6l47" path="res://ui/sprites/controller_right_pressed.png" id="9_stshu"]
+[ext_resource type="Texture2D" uid="uid://dp8nryu6cgt8g" path="res://ui/sprites/controller_up.png" id="10_rv4ku"]
+[ext_resource type="Texture2D" uid="uid://i5pijbw66nok" path="res://ui/sprites/controller_up_pressed.png" id="11_bo3ba"]
+[ext_resource type="Texture2D" uid="uid://diowaaftvieio" path="res://ui/sprites/controller_interact.png" id="12_k7ilf"]
+[ext_resource type="Texture2D" uid="uid://dpvf7pgvxyvcg" path="res://ui/sprites/controller_interact_pressed.png" id="13_ycuy0"]
+
+[node name="ControlsUI" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = -640.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7ra7k")
+
+[node name="Pause" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1171.0
+offset_top = 44.0
+offset_right = 1241.0
+offset_bottom = 114.0
+texture_normal = ExtResource("2_i1bro")
+texture_pressed = ExtResource("3_x5jk1")
+texture_disabled = ExtResource("3_x5jk1")
+
+[node name="ControllerDown" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1079.0
+offset_top = 607.0
+offset_right = 1163.0
+offset_bottom = 667.0
+texture_normal = ExtResource("4_gg8gu")
+texture_pressed = ExtResource("5_4uu4j")
+texture_disabled = ExtResource("5_4uu4j")
+
+[node name="ControllerLeft" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1015.0
+offset_top = 528.0
+offset_right = 1080.0
+offset_bottom = 598.0
+texture_normal = ExtResource("6_xqvn5")
+texture_pressed = ExtResource("7_gj2ts")
+texture_disabled = ExtResource("7_gj2ts")
+
+[node name="ControllerRight" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = 1161.0
+offset_top = 530.0
+offset_right = 1233.0
+offset_bottom = 601.0
+texture_normal = ExtResource("8_wkabg")
+texture_pressed = ExtResource("9_stshu")
+texture_disabled = ExtResource("9_stshu")
+
+[node name="ControllerUp" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1084.0
+offset_top = 456.0
+offset_right = 1156.0
+offset_bottom = 524.0
+texture_normal = ExtResource("10_rv4ku")
+texture_pressed = ExtResource("11_bo3ba")
+texture_disabled = ExtResource("11_bo3ba")
+
+[node name="ControllerInteract" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1080.0
+offset_top = 526.0
+offset_right = 1157.0
+offset_bottom = 607.0
+texture_normal = ExtResource("12_k7ilf")
+texture_pressed = ExtResource("13_ycuy0")
+texture_disabled = ExtResource("13_ycuy0")
+
+[connection signal="pressed" from="Pause" to="." method="_on_pause_pressed"]
