@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c2wodoi6746bm" path="res://ui/sprites/pause_menu_button_2.png" id="5_03vas"]
 [ext_resource type="Texture2D" uid="uid://x81fwns1bn7t" path="res://ui/sprites/pause_menu_button_2_pressed.png" id="6_x2igm"]
 [ext_resource type="PackedScene" uid="uid://c5n5dvlpxo8u8" path="res://ui/nodes/button_switch_scene.tscn" id="8_nvlbo"]
-[ext_resource type="Resource" uid="uid://deq8aren1xl24" path="res://levels/new_resource.tres" id="9_ue4ki"]
+[ext_resource type="Resource" uid="uid://cnw5lki2q6d7a" path="res://levels/menu/resources/main_menu.res" id="9_i071r"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -104,7 +104,7 @@ offset_left = -147.0
 offset_top = 61.0
 offset_right = 146.0
 offset_bottom = 147.0
-Level = ExtResource("9_ue4ki")
+Level = ExtResource("9_i071r")
 CustomLabel = "Quit"
 
 [connection signal="pressed" from="PauseMenu/Resume" to="." method="_on_resume_pressed"]

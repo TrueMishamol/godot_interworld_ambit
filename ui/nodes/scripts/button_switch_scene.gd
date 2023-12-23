@@ -20,7 +20,7 @@ func _on_pressed():
 	if Level == null:
 		return
 	get_tree().set_deferred("paused", false)
-	get_tree().change_scene_to_packed(Level.Scene)
+	get_tree().change_scene_to_file(Level.Path)
 
 func _update_label():
 	if CustomLabel == "":
