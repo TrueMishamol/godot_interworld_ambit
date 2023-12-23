@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://furbuj34t38t"]
+[gd_scene load_steps=7 format=3 uid="uid://furbuj34t38t"]
 
 [ext_resource type="Theme" uid="uid://d2p58ngrkwytp" path="res://visual/theme/puffed_bun.tres" id="1_k4h6j"]
 [ext_resource type="Script" path="res://ui/nodes/scripts/menu_game_over.gd" id="2_34nbb"]
 [ext_resource type="Texture2D" uid="uid://c2wodoi6746bm" path="res://ui/sprites/pause_menu_button_2.png" id="2_eq3s6"]
 [ext_resource type="Texture2D" uid="uid://x81fwns1bn7t" path="res://ui/sprites/pause_menu_button_2_pressed.png" id="3_ydmhb"]
-[ext_resource type="Texture2D" uid="uid://b5pbuhwy2c23m" path="res://ui/sprites/pause_menu_button_3.png" id="4_14e34"]
-[ext_resource type="Texture2D" uid="uid://bemplgjqyijgf" path="res://ui/sprites/pause_menu_button_3_pressed.png" id="5_c844n"]
-[ext_resource type="Script" path="res://ui/nodes/scripts/button_switch_scene.gd" id="7_46kku"]
+[ext_resource type="PackedScene" uid="uid://c5n5dvlpxo8u8" path="res://ui/nodes/button_switch_scene.tscn" id="5_31pgu"]
+[ext_resource type="Resource" uid="uid://dqosr75pvdkgg" path="res://levels/menu/resources/main_menu.tres" id="6_d8w5v"]
 
 [node name="GameOverMenu" type="Control"]
 layout_mode = 3
@@ -109,35 +108,13 @@ text = "Retry
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Quit" type="TextureButton" parent="GameOverScreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+[node name="SceneSwitchButton" parent="GameOverScreen" instance=ExtResource("5_31pgu")]
+layout_mode = 0
 offset_left = -147.0
 offset_top = -17.0
-offset_right = 147.0
+offset_right = 146.0
 offset_bottom = 69.0
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("4_14e34")
-texture_pressed = ExtResource("5_c844n")
-texture_disabled = ExtResource("5_c844n")
-script = ExtResource("7_46kku")
-level_path = "res://levels/menu/menu_level_select.tscn"
-
-[node name="Label" type="Label" parent="GameOverScreen/Quit"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Quit"
-horizontal_alignment = 1
-vertical_alignment = 1
+Level = ExtResource("6_d8w5v")
+CustomLabel = "Quit"
 
 [connection signal="pressed" from="GameOverScreen/Retry" to="." method="_on_retry_pressed"]
-[connection signal="pressed" from="GameOverScreen/Quit" to="GameOverScreen/Quit" method="_on_pressed"]

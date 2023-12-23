@@ -1,3 +1,5 @@
+@tool
+
 extends TextureButton
 
 
@@ -9,6 +11,10 @@ extends TextureButton
 
 func  _ready():
 	_update_label()
+	
+func _process(_delta):
+	if Engine.is_editor_hint():
+		_update_label()
 
 func _on_pressed():
 	if Level == null:

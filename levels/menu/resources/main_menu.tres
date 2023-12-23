@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelInfoResource" load_steps=3 format=3 uid="uid://dqosr75pvdkgg"]
+
+[ext_resource type="Script" path="res://levels/level_info_resource.gd" id="1_dis5c"]
+[ext_resource type="PackedScene" uid="uid://dt30mlesbamuf" path="res://levels/menu/main_menu.tscn" id="1_or723"]
+
+[resource]
+script = ExtResource("1_dis5c")
+Name = "Main Menu"
+Scene = ExtResource("1_or723")
+Description = "The place, where you start your adventure"

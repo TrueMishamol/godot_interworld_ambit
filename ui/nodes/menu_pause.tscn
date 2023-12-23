@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bw4w5u3hv70j0"]
+[gd_scene load_steps=10 format=3 uid="uid://bw4w5u3hv70j0"]
 
 [ext_resource type="Theme" uid="uid://d2p58ngrkwytp" path="res://visual/theme/puffed_bun.tres" id="1_5tikq"]
 [ext_resource type="Script" path="res://ui/nodes/scripts/menu_pause.gd" id="1_rg50p"]
@@ -7,9 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://8d16qogvh3ti" path="res://ui/sprites/pause_menu_button_1_pressed.png" id="4_j8p6m"]
 [ext_resource type="Texture2D" uid="uid://c2wodoi6746bm" path="res://ui/sprites/pause_menu_button_2.png" id="5_03vas"]
 [ext_resource type="Texture2D" uid="uid://x81fwns1bn7t" path="res://ui/sprites/pause_menu_button_2_pressed.png" id="6_x2igm"]
-[ext_resource type="Texture2D" uid="uid://b5pbuhwy2c23m" path="res://ui/sprites/pause_menu_button_3.png" id="7_hek1w"]
-[ext_resource type="Texture2D" uid="uid://bemplgjqyijgf" path="res://ui/sprites/pause_menu_button_3_pressed.png" id="8_6e6u7"]
-[ext_resource type="Script" path="res://ui/nodes/scripts/button_switch_scene.gd" id="10_rgb34"]
+[ext_resource type="PackedScene" uid="uid://c5n5dvlpxo8u8" path="res://ui/nodes/button_switch_scene.tscn" id="8_nvlbo"]
+[ext_resource type="Resource" uid="uid://dqosr75pvdkgg" path="res://levels/menu/resources/main_menu.tres" id="9_ue4ki"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -99,36 +98,14 @@ text = "Options"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Quit" type="TextureButton" parent="PauseMenu"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+[node name="Quit" parent="PauseMenu" instance=ExtResource("8_nvlbo")]
+layout_mode = 0
 offset_left = -147.0
 offset_top = 61.0
-offset_right = 147.0
+offset_right = 146.0
 offset_bottom = 147.0
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("7_hek1w")
-texture_pressed = ExtResource("8_6e6u7")
-texture_disabled = ExtResource("8_6e6u7")
-script = ExtResource("10_rgb34")
-level_path = "res://levels/menu/menu_level_select.tscn"
-
-[node name="Label" type="Label" parent="PauseMenu/Quit"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Quit"
-horizontal_alignment = 1
-vertical_alignment = 1
+Level = ExtResource("9_ue4ki")
+CustomLabel = "Quit"
 
 [connection signal="pressed" from="PauseMenu/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PauseMenu/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="PauseMenu/Quit" to="PauseMenu/Quit" method="_on_pressed"]
