@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="LevelListResource" load_steps=4 format=3 uid="uid://wqsu667ox5n4"]
-
-[ext_resource type="Script" path="res://levels/level_list_resource.gd" id="1_81qxt"]
-[ext_resource type="Resource" uid="uid://b5irk8hm1l1tg" path="res://levels/chapter_1/resources/level_res.tres" id="1_lborq"]
-[ext_resource type="Resource" uid="uid://cht7mhkmadm1" path="res://levels/chapter_1/resources/shooter_res.tres" id="2_o7cxs"]
-
-[resource]
-script = ExtResource("1_81qxt")
-LevelList = Array[Resource("res://levels/level_info_resource.gd")]([ExtResource("1_lborq"), ExtResource("2_o7cxs")])

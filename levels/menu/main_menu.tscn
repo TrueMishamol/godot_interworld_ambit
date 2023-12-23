@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bg6c3d5odifpt" path="res://ui/sprites/pause_menu_button_1.png" id="3_rxv65"]
 [ext_resource type="Texture2D" uid="uid://8d16qogvh3ti" path="res://ui/sprites/pause_menu_button_1_pressed.png" id="4_8vaml"]
 [ext_resource type="Script" path="res://ui/nodes/scripts/button_switch_scene.gd" id="5_6ntjo"]
-[ext_resource type="Resource" uid="uid://cxt2vxj2tjxk2" path="res://levels/menu/resources/level_select.tres" id="6_i18i1"]
+[ext_resource type="Resource" uid="uid://bkscarapaic4i" path="res://levels/menu/resources/level_select.res" id="6_i18i1"]
 [ext_resource type="Texture2D" uid="uid://5umdrgnfapwd" path="res://ui/sprites/mishamol.svg" id="7_o6h2h"]
 
 [node name="MainMenu" type="Control"]

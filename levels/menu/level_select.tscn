@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://d2p58ngrkwytp" path="res://visual/theme/puffed_bun.tres" id="1_m1won"]
 [ext_resource type="Script" path="res://levels/menu/scripts/level_select.gd" id="2_egdgu"]
-[ext_resource type="Resource" uid="uid://wqsu667ox5n4" path="res://levels/level_list.tres" id="3_ls1yd"]
+[ext_resource type="Resource" uid="uid://fc65jvhqr6ps" path="res://levels/levels_list.res" id="3_ls1yd"]
 [ext_resource type="PackedScene" uid="uid://c5n5dvlpxo8u8" path="res://ui/nodes/button_switch_scene.tscn" id="4_2of5h"]
 
 [node name="LevelSelectScreen" type="Control"]
