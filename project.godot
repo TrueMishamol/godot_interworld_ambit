@@ -23,7 +23,7 @@ config/icon="res://ui/interworld_ambit.png"
 
 [autoload]
 
-ApplicationControls="*res://scripts/application_controls.gd"
+ApplicationControls="*res://scripts/autoload/application_controls.gd"
 
 [display]
 
@@ -39,7 +39,9 @@ enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg")
 [file_customization]
 
 folder_colors={
+"res://addons/": "pink",
 "res://levels/": "purple",
+"res://nodes/": "blue",
 "res://scenes/": "blue",
 "res://scripts/": "green",
 "res://ui/": "yellow",

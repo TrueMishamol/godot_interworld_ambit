@@ -1,11 +1,11 @@
 extends Node
 
 
-var level_names := [
-	"don't fly out!",
-	"slippery slippy",
-	"interworld danger!",
-	]
+var level_names := {
+	"Level": "res://levels/chapter_1/level.tscn",
+	"Level Dialogue": "res://levels/chapter_1/level_dialogue.tres",
+	"Level Shooter": "res://levels/chapter_1/level_shooter.tscn",
+}
 
 #static func get_level_by_order_number(order_number:int) -> string:
 	#return "df"

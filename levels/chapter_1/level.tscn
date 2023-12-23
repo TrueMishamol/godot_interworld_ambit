@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://sahjam5ngmdg"]
 
+[ext_resource type="Script" path="res://levels/chapter_1/scripts/level.gd" id="1_7xmqr"]
 [ext_resource type="PackedScene" uid="uid://ce8pahnosn5rr" path="res://nodes/managers/game_pause.tscn" id="1_fjmbr"]
-[ext_resource type="Script" path="res://levels/chapter_1/level.gd" id="1_mll7s"]
 [ext_resource type="PackedScene" uid="uid://cshmhfi1bmqqp" path="res://nodes/managers/game_over.tscn" id="2_woslb"]
 [ext_resource type="PackedScene" uid="uid://l40hahm7j6l" path="res://nodes/ui/ingame_ui.tscn" id="3_n7aku"]
 [ext_resource type="PackedScene" uid="uid://edy4wxcyhdgu" path="res://nodes/player/player.tscn" id="4_ldw37"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b5cvjxixt6li8" path="res://visual/entities/item.png" id="9_lvmth"]
 [ext_resource type="Texture2D" uid="uid://2ttbmgopuocb" path="res://visual/entities/activator.png" id="10_khith"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="11_ljsri"]
-[ext_resource type="Resource" uid="uid://bww3kw4csifx0" path="res://levels/chapter_1/level_dialogue.tres" id="12_jdeo4"]
+[ext_resource type="Resource" uid="uid://bww3kw4csifx0" path="res://levels/chapter_1/dialogue/level_dialogue.tres" id="13_44wkm"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="13_iqjki"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="14_p7cr8"]
 
@@ -30,7 +30,7 @@ script = ExtResource("14_p7cr8")
 
 [node name="Level" type="Node2D"]
 position = Vector2(642, 364)
-script = ExtResource("1_mll7s")
+script = ExtResource("1_7xmqr")
 
 [node name="GamePause" parent="." instance=ExtResource("1_fjmbr")]
 
@@ -117,6 +117,6 @@ custom_minimum_size = Vector2(256, 128)
 offset_right = 256.0
 offset_bottom = 128.0
 script = ExtResource("11_ljsri")
-dialogue_data = ExtResource("12_jdeo4")
+dialogue_data = ExtResource("13_44wkm")
 start_id = "MISHAMOL"
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_0dexg"), SubResource("RichTextEffect_grekv")])

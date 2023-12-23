@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelInfoResource" load_steps=3 format=3 uid="uid://b5irk8hm1l1tg"]
+
+[ext_resource type="PackedScene" uid="uid://sahjam5ngmdg" path="res://levels/chapter_1/level.tscn" id="1_mb2is"]
+[ext_resource type="Script" path="res://levels/level_info_resource.gd" id="2_ixbym"]
+
+[resource]
+script = ExtResource("2_ixbym")
+Name = "Level"
+Path = ExtResource("1_mb2is")
+Description = "First ever created Level in the game!!!"
