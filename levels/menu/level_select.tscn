@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://dw7sjnut1lj4l"]
+
+[ext_resource type="Theme" uid="uid://d2p58ngrkwytp" path="res://visual/theme/puffed_bun.tres" id="1_m1won"]
+[ext_resource type="Script" path="res://levels/menu/scripts/level_select.gd" id="2_egdgu"]
+[ext_resource type="Resource" uid="uid://wqsu667ox5n4" path="res://levels/level_list.tres" id="3_ls1yd"]
+[ext_resource type="PackedScene" uid="uid://c5n5dvlpxo8u8" path="res://ui/nodes/button_switch_scene.tscn" id="4_2of5h"]
+
+[node name="LevelSelectScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_m1won")
+script = ExtResource("2_egdgu")
+LevelList = ExtResource("3_ls1yd")
+ButtonSceneSwitch = ExtResource("4_2of5h")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 509.0
+offset_top = 38.0
+offset_right = 771.0
+offset_bottom = 106.0
+size_flags_horizontal = 4
+text = "Level select"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+clip_contents = false
+layout_mode = 2
+offset_left = 39.0
+offset_top = 187.0
+offset_right = 1242.0
+offset_bottom = 670.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 20
+columns = 4

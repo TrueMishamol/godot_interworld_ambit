@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://levels/chapter_1/scripts/level.gd" id="1_7xmqr"]
 [ext_resource type="PackedScene" uid="uid://ce8pahnosn5rr" path="res://nodes/managers/game_pause.tscn" id="1_fjmbr"]
 [ext_resource type="PackedScene" uid="uid://cshmhfi1bmqqp" path="res://nodes/managers/game_over.tscn" id="2_woslb"]
-[ext_resource type="PackedScene" uid="uid://l40hahm7j6l" path="res://nodes/ui/gui_game_overlay.tscn" id="3_n7aku"]
+[ext_resource type="PackedScene" uid="uid://l40hahm7j6l" path="res://ui/nodes/gui_game_overlay.tscn" id="4_jio2y"]
 [ext_resource type="PackedScene" uid="uid://edy4wxcyhdgu" path="res://nodes/player/player.tscn" id="4_ldw37"]
 [ext_resource type="PackedScene" uid="uid://c6ybtfco3lbt2" path="res://nodes/enviroment/movable_level_borders.tscn" id="5_kce3g"]
 [ext_resource type="PackedScene" uid="uid://cnwcq6akkp0hu" path="res://nodes/enemy/enemy.tscn" id="6_qsrok"]
@@ -36,7 +36,7 @@ script = ExtResource("1_7xmqr")
 
 [node name="GameOver" parent="." instance=ExtResource("2_woslb")]
 
-[node name="IngameUI" parent="." instance=ExtResource("3_n7aku")]
+[node name="IngameUI" parent="." instance=ExtResource("4_jio2y")]
 
 [node name="Player" parent="." instance=ExtResource("4_ldw37")]
 

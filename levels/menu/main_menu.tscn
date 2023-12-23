@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dt30mlesbamuf"]
+[gd_scene load_steps=8 format=3 uid="uid://dt30mlesbamuf"]
 
-[ext_resource type="Theme" uid="uid://d2p58ngrkwytp" path="res://visual/theme/puffed_bun.tres" id="1_55xp5"]
-[ext_resource type="Script" path="res://ui/splash_randomizer.gd" id="2_5fbgs"]
-[ext_resource type="Texture2D" uid="uid://bg6c3d5odifpt" path="res://ui/sprites/pause_menu_button_1.png" id="2_8gwno"]
-[ext_resource type="Texture2D" uid="uid://8d16qogvh3ti" path="res://ui/sprites/pause_menu_button_1_pressed.png" id="3_7nteh"]
-[ext_resource type="Texture2D" uid="uid://5umdrgnfapwd" path="res://ui/sprites/mishamol.svg" id="3_w51kw"]
-[ext_resource type="Script" path="res://nodes/ui/scripts/button_switch_scene.gd" id="4_qkecg"]
+[ext_resource type="Theme" uid="uid://d2p58ngrkwytp" path="res://visual/theme/puffed_bun.tres" id="1_pw7ky"]
+[ext_resource type="Script" path="res://ui/splash_randomizer.gd" id="2_edihi"]
+[ext_resource type="Texture2D" uid="uid://bg6c3d5odifpt" path="res://ui/sprites/pause_menu_button_1.png" id="3_rxv65"]
+[ext_resource type="Texture2D" uid="uid://8d16qogvh3ti" path="res://ui/sprites/pause_menu_button_1_pressed.png" id="4_8vaml"]
+[ext_resource type="Script" path="res://ui/nodes/scripts/button_switch_scene.gd" id="5_6ntjo"]
+[ext_resource type="Resource" uid="uid://cxt2vxj2tjxk2" path="res://levels/menu/resources/level_select.tres" id="6_i18i1"]
+[ext_resource type="Texture2D" uid="uid://5umdrgnfapwd" path="res://ui/sprites/mishamol.svg" id="7_o6h2h"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -14,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_55xp5")
+theme = ExtResource("1_pw7ky")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
@@ -65,7 +66,7 @@ theme_override_font_sizes/font_size = 55
 text = "don't fly out!"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("2_5fbgs")
+script = ExtResource("2_edihi")
 
 [node name="SceneSwitchButton" type="TextureButton" parent="Control"]
 layout_mode = 1
@@ -80,12 +81,13 @@ offset_right = 146.5
 offset_bottom = 53.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_55xp5")
-texture_normal = ExtResource("2_8gwno")
-texture_pressed = ExtResource("3_7nteh")
-texture_disabled = ExtResource("3_7nteh")
-script = ExtResource("4_qkecg")
-level_path = "res://levels/menu/menu_level_select.tscn"
+theme = ExtResource("1_pw7ky")
+texture_normal = ExtResource("3_rxv65")
+texture_pressed = ExtResource("4_8vaml")
+texture_disabled = ExtResource("4_8vaml")
+script = ExtResource("5_6ntjo")
+Level = ExtResource("6_i18i1")
+CustomLabel = "Start"
 
 [node name="Label" type="Label" parent="Control/SceneSwitchButton"]
 layout_mode = 1
@@ -132,14 +134,14 @@ vertical_alignment = 1
 
 [node name="Mishamol" type="Sprite2D" parent="Control/Mishamol"]
 position = Vector2(240, 18)
-texture = ExtResource("3_w51kw")
+texture = ExtResource("7_o6h2h")
 
 [node name="LinkButton" type="LinkButton" parent="Control/Mishamol/Mishamol"]
 offset_left = -127.0
 offset_top = -27.0
 offset_right = 135.0
 offset_bottom = 38.0
-theme = ExtResource("1_55xp5")
+theme = ExtResource("1_pw7ky")
 text = "            "
 underline = 1
 uri = "https://mishamol.ru/"

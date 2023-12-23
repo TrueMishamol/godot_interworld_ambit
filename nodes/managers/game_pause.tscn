@@ -2,6 +2,5 @@
 
 [ext_resource type="Script" path="res://nodes/managers/game_pause.gd" id="1_pjgj1"]
 
-
 [node name="GamePause" type="Node"]
 script = ExtResource("1_pjgj1")

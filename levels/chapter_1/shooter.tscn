@@ -1,12 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://c3h4huvird77m"]
 
-[ext_resource type="PackedScene" uid="uid://c6ybtfco3lbt2" path="res://nodes/enviroment/movable_level_borders.tscn" id="1_2socu"]
-[ext_resource type="PackedScene" uid="uid://ce8pahnosn5rr" path="res://nodes/managers/game_pause.tscn" id="1_s688o"]
-[ext_resource type="PackedScene" uid="uid://l40hahm7j6l" path="res://nodes/ui/gui_game_overlay.tscn" id="2_7cm1u"]
-[ext_resource type="PackedScene" uid="uid://cshmhfi1bmqqp" path="res://nodes/managers/game_over.tscn" id="2_tlajo"]
-[ext_resource type="PackedScene" uid="uid://edy4wxcyhdgu" path="res://nodes/player/player.tscn" id="4_ycgks"]
-[ext_resource type="PackedScene" uid="uid://cnwcq6akkp0hu" path="res://nodes/enemy/enemy.tscn" id="5_sjwnx"]
-
+[ext_resource type="PackedScene" uid="uid://ce8pahnosn5rr" path="res://nodes/managers/game_pause.tscn" id="1_kf2fe"]
+[ext_resource type="PackedScene" uid="uid://cshmhfi1bmqqp" path="res://nodes/managers/game_over.tscn" id="2_xbd3t"]
+[ext_resource type="PackedScene" uid="uid://l40hahm7j6l" path="res://ui/nodes/gui_game_overlay.tscn" id="3_v7q48"]
+[ext_resource type="PackedScene" uid="uid://edy4wxcyhdgu" path="res://nodes/player/player.tscn" id="4_6f7to"]
+[ext_resource type="PackedScene" uid="uid://c6ybtfco3lbt2" path="res://nodes/enviroment/movable_level_borders.tscn" id="5_3kfkf"]
+[ext_resource type="PackedScene" uid="uid://cnwcq6akkp0hu" path="res://nodes/enemy/enemy.tscn" id="6_qfojl"]
 
 [sub_resource type="Curve2D" id="Curve2D_3jxmn"]
 _data = {
@@ -16,25 +15,25 @@ point_count = 19
 
 [node name="Shooter" type="Node2D"]
 
-[node name="GamePause" parent="." instance=ExtResource("1_s688o")]
+[node name="GamePause" parent="." instance=ExtResource("1_kf2fe")]
 
-[node name="GameOver" parent="." instance=ExtResource("2_tlajo")]
+[node name="GameOver" parent="." instance=ExtResource("2_xbd3t")]
 
-[node name="IngameUI" parent="." instance=ExtResource("2_7cm1u")]
+[node name="IngameUI" parent="." instance=ExtResource("3_v7q48")]
 
-[node name="Player" parent="." instance=ExtResource("4_ycgks")]
+[node name="Player" parent="." instance=ExtResource("4_6f7to")]
 position = Vector2(943, 497)
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_3jxmn")
 
-[node name="MovableLevelBorders" parent="Path2D" instance=ExtResource("1_2socu")]
+[node name="MovableLevelBorders" parent="Path2D" instance=ExtResource("5_3kfkf")]
 unique_name_in_owner = true
 
 [node name="Enviroment" type="Node2D" parent="."]
 
-[node name="Enemy" parent="Enviroment" instance=ExtResource("5_sjwnx")]
+[node name="Enemy" parent="Enviroment" instance=ExtResource("6_qfojl")]
 position = Vector2(822, -334)
 
-[node name="Enemy2" parent="Enviroment" instance=ExtResource("5_sjwnx")]
+[node name="Enemy2" parent="Enviroment" instance=ExtResource("6_qfojl")]
 position = Vector2(1172, -431)

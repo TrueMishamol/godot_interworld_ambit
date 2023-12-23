@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("2_ixbym")
 Name = "Level"
-Path = ExtResource("1_mb2is")
+Scene = ExtResource("1_mb2is")
 Description = "First ever created Level in the game!!!"

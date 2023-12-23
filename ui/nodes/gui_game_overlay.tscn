@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://l40hahm7j6l"]
+
+[ext_resource type="Script" path="res://ui/nodes/scripts/gui_game_overlay.gd" id="1_kpep5"]
+[ext_resource type="PackedScene" uid="uid://dny75u2i3tq8w" path="res://ui/nodes/gui_sensor_buttons.tscn" id="2_tdmu0"]
+[ext_resource type="PackedScene" uid="uid://furbuj34t38t" path="res://ui/nodes/menu_game_over.tscn" id="3_w3dfi"]
+[ext_resource type="PackedScene" uid="uid://bw4w5u3hv70j0" path="res://ui/nodes/menu_pause.tscn" id="4_xr3cs"]
+[ext_resource type="PackedScene" uid="uid://bksr7xyasmmpp" path="res://ui/nodes/menu_options.tscn" id="5_4cnn2"]
+[ext_resource type="Texture2D" uid="uid://c0huryriawnve" path="res://ui/sprites/screen_border.png" id="6_0fh14"]
+
+[node name="IngameUI" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_kpep5")
+
+[node name="Controls" parent="." instance=ExtResource("2_tdmu0")]
+
+[node name="GameOver" parent="." instance=ExtResource("3_w3dfi")]
+visible = false
+
+[node name="Pause" parent="." instance=ExtResource("4_xr3cs")]
+visible = false
+
+[node name="Options" parent="." instance=ExtResource("5_4cnn2")]
+visible = false
+
+[node name="ScreenBorder" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = -640.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ScreenBorderSprite" type="Sprite2D" parent="ScreenBorder"]
+position = Vector2(640, 360)
+texture = ExtResource("6_0fh14")
+
+[connection signal="game_paused" from="Controls" to="." method="_on_controls_game_paused"]
+[connection signal="options" from="Pause" to="." method="_on_pause_menu_options"]
+[connection signal="resume" from="Pause" to="." method="_on_pause_menu_resume"]
