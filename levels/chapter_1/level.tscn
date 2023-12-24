@@ -16,7 +16,6 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="13_iqjki"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="14_p7cr8"]
 
-
 [sub_resource type="Curve2D" id="Curve2D_na6ig"]
 _data = {
 "points": PackedVector2Array(-17.9756, 30.5025, 17.9756, -30.5025, -483, -42, -316, -28, 316, 28, 84, -152, -144, -228, 144, 228, 508, 311, -156, -4, 156, 4, 807, 571, 0, 0, 0, 0, 1353, 483, 484, -8, -484, 8, 354, 1135, -4, -308, 4, 308, -581, 541, 0, 0, 0, 0, 1338, -416, 308, -132, -308, 132, -522, -792, -92, -264, 92, 264, -885, -67, 0, 0, 0, 0, -483, -42)
