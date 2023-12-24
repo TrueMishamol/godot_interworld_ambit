@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ce8pahnosn5rr"]
 
-[ext_resource type="Script" path="res://nodes/managers/game_pause.gd" id="1_pjgj1"]
+[ext_resource type="Script" path="res://scripts/managers/game_pause.gd" id="1_pjgj1"]
 
 [node name="GamePause" type="Node"]
 script = ExtResource("1_pjgj1")
