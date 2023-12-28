@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://d2p58ngrkwytp"]
 
-[ext_resource type="FontFile" uid="uid://cm0rddnrdu5nq" path="res://visual/theme/MishamolPuffedBun-Regular.otf" id="1_cke3h"]
+[ext_resource type="FontFile" uid="uid://cm0rddnrdu5nq" path="res://ui/theme/MishamolPuffedBun-Regular.otf" id="1_cke3h"]
 
 [resource]
 default_font = ExtResource("1_cke3h")

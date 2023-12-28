@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://sahjam5ngmdg"]
+[gd_scene load_steps=20 format=3 uid="uid://sahjam5ngmdg"]
 
 [ext_resource type="Script" path="res://levels/chapter_1/scripts/level.gd" id="1_7xmqr"]
 [ext_resource type="PackedScene" uid="uid://ce8pahnosn5rr" path="res://scripts/managers/game_pause.tscn" id="1_fjmbr"]
@@ -6,27 +6,28 @@
 [ext_resource type="PackedScene" uid="uid://l40hahm7j6l" path="res://ui/nodes/gui_game_overlay.tscn" id="4_jio2y"]
 [ext_resource type="PackedScene" uid="uid://edy4wxcyhdgu" path="res://nodes/player/player.tscn" id="4_ldw37"]
 [ext_resource type="PackedScene" uid="uid://c6ybtfco3lbt2" path="res://nodes/enviroment/movable_level_borders.tscn" id="5_kce3g"]
+[ext_resource type="Theme" uid="uid://dsiftc8buu532" path="res://ui/theme/puffed_bun_dialogues.tres" id="5_xv2da"]
 [ext_resource type="PackedScene" uid="uid://cnwcq6akkp0hu" path="res://nodes/enemy/enemy.tscn" id="6_qsrok"]
 [ext_resource type="PackedScene" uid="uid://cxp3s6hkpg1a5" path="res://nodes/enviroment/activator.tscn" id="7_7hevh"]
 [ext_resource type="Texture2D" uid="uid://6jmn8a0gpdk2" path="res://visual/entities/plant.png" id="8_odaao"]
 [ext_resource type="Texture2D" uid="uid://b5cvjxixt6li8" path="res://visual/entities/item.png" id="9_lvmth"]
 [ext_resource type="Texture2D" uid="uid://2ttbmgopuocb" path="res://visual/entities/activator.png" id="10_khith"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="11_ljsri"]
-[ext_resource type="Resource" uid="uid://bww3kw4csifx0" path="res://levels/chapter_1/dialogue/level_dialogue.tres" id="13_44wkm"]
+[ext_resource type="Resource" uid="uid://rxky6x7885xq" path="res://levels/chapter_1/dialogue/level_dialogue.tres" id="13_44wkm"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="13_iqjki"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="14_p7cr8"]
-
-[sub_resource type="Curve2D" id="Curve2D_na6ig"]
-_data = {
-"points": PackedVector2Array(-17.9756, 30.5025, 17.9756, -30.5025, -483, -42, -316, -28, 316, 28, 84, -152, -144, -228, 144, 228, 508, 311, -156, -4, 156, 4, 807, 571, 0, 0, 0, 0, 1353, 483, 484, -8, -484, 8, 354, 1135, -4, -308, 4, 308, -581, 541, 0, 0, 0, 0, 1338, -416, 308, -132, -308, 132, -522, -792, -92, -264, 92, 264, -885, -67, 0, 0, 0, 0, -483, -42)
-}
-point_count = 11
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_0dexg"]
 script = ExtResource("13_iqjki")
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_grekv"]
 script = ExtResource("14_p7cr8")
+
+[sub_resource type="Curve2D" id="Curve2D_na6ig"]
+_data = {
+"points": PackedVector2Array(-17.9756, 30.5025, 17.9756, -30.5025, -483, -42, -316, -28, 316, 28, 84, -152, -144, -228, 144, 228, 508, 311, -156, -4, 156, 4, 807, 571, 0, 0, 0, 0, 1353, 483, 484, -8, -484, 8, 354, 1135, -4, -308, 4, 308, -581, 541, 0, 0, 0, 0, 1338, -416, 308, -132, -308, 132, -522, -792, -92, -264, 92, 264, -885, -67, 0, 0, 0, 0, -483, -42)
+}
+point_count = 11
 
 [node name="Level" type="Node2D"]
 position = Vector2(642, 364)
@@ -37,6 +38,25 @@ script = ExtResource("1_7xmqr")
 [node name="GameOver" parent="." instance=ExtResource("2_woslb")]
 
 [node name="IngameUI" parent="." instance=ExtResource("4_jio2y")]
+
+[node name="DialogueBox" type="Panel" parent="IngameUI"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 128)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -284.0
+offset_right = -25.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_xv2da")
+script = ExtResource("11_ljsri")
+dialogue_data = ExtResource("13_44wkm")
+start_id = "MISHAMOL"
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_0dexg"), SubResource("RichTextEffect_grekv")])
 
 [node name="Player" parent="." instance=ExtResource("4_ldw37")]
 
@@ -110,13 +130,3 @@ position = Vector2(1134, 532)
 
 [node name="Enemy2" parent="." instance=ExtResource("6_qsrok")]
 position = Vector2(1242, 572)
-
-[node name="DialogueBox" type="Panel" parent="."]
-visible = false
-custom_minimum_size = Vector2(256, 128)
-offset_right = 256.0
-offset_bottom = 128.0
-script = ExtResource("11_ljsri")
-dialogue_data = ExtResource("13_44wkm")
-start_id = "MISHAMOL"
-custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_0dexg"), SubResource("RichTextEffect_grekv")])

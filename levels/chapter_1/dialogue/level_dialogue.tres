@@ -1,12 +1,77 @@
-[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://bww3kw4csifx0"]
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://rxky6x7885xq"]
 
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_d7vwp"]
 
 [resource]
 script = ExtResource("1_d7vwp")
-starts = {}
-nodes = {}
+starts = {
+"MISHAMOL": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-1411.53, -56.5825),
+"start_id": "MISHAMOL"
+},
+"1_1": {
+"dialogue": "Oh! Wow! I didn't expect this!",
+"offset": Vector2(-980, -160),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(589.162, 560.794),
+"speaker": 0
+},
+"1_2": {
+"dialogue": "THE VOID!!",
+"offset": Vector2(-300, -160),
+"options": {
+0: {
+"condition": {},
+"link": &"1_3",
+"text": "Yes"
+},
+1: {
+"condition": {},
+"link": &"1_4",
+"text": "No"
+}
+},
+"size": Vector2(642.374, 496.964),
+"speaker": 0
+},
+"1_3": {
+"dialogue": "YES!!!",
+"offset": Vector2(422.798, -122.065),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(304, 372),
+"speaker": 0
+},
+"1_4": {
+"dialogue": "WoW",
+"offset": Vector2(361.456, 439.999),
+"options": {
+0: {
+"condition": {},
+"link": "END",
+"text": ""
+}
+},
+"size": Vector2(304, 372),
+"speaker": 0
+}
+}
 variables = {}
 comments = Array[String]([])
 strays = Array[String]([])
-characters = ""
+characters = "res://visual/mishamol/character_list.tres"
