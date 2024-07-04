@@ -26,7 +26,7 @@ func  player_movement(delta):
 	if input_direction == Vector2.ZERO:
 		# Slows
 		if velocity.length() > (FRICTION * delta):
-			velocity -=velocity.normalized() * (FRICTION * delta)
+			velocity -= velocity.normalized() * (FRICTION * delta)
 		else:
 			velocity = Vector2.ZERO
 	else:

@@ -39,7 +39,8 @@ enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg")
 [file_customization]
 
 folder_colors={
-"res://addons/": "pink",
+"res://addons/": "red",
+"res://audio/": "pink",
 "res://levels/": "purple",
 "res://nodes/": "blue",
 "res://scenes/": "blue",

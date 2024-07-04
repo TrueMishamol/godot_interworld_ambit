@@ -41,6 +41,7 @@ script = ExtResource("1_7xmqr")
 
 [node name="DialogueBox" type="Panel" parent="IngameUI"]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(256, 128)
 anchors_preset = 12
 anchor_top = 1.0
