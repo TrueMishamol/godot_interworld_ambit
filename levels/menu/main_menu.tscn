@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dt30mlesbamuf"]
 
 [ext_resource type="Theme" uid="uid://d2p58ngrkwytp" path="res://ui/theme/puffed_bun.tres" id="1_pw7ky"]
-[ext_resource type="Script" path="res://ui/splash_randomizer.gd" id="2_edihi"]
+[ext_resource type="Script" uid="uid://d3cosqcglhsm8" path="res://ui/splash_randomizer.gd" id="2_edihi"]
 [ext_resource type="PackedScene" uid="uid://c5n5dvlpxo8u8" path="res://ui/nodes/button_switch_scene.tscn" id="3_dr0e1"]
 [ext_resource type="Resource" uid="uid://bkscarapaic4i" path="res://levels/menu/resources/level_select.res" id="6_i18i1"]
 [ext_resource type="Texture2D" uid="uid://5umdrgnfapwd" path="res://ui/sprites/mishamol.svg" id="7_o6h2h"]

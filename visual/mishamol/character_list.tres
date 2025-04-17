@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="CharacterList" load_steps=3 format=3 uid="uid://mwcpymwa3rgn"]
+[gd_resource type="Resource" script_class="CharacterList" load_steps=4 format=3 uid="uid://mwcpymwa3rgn"]
 
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="1_olqip"]
+[ext_resource type="Script" uid="uid://o386047crfwl" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_l8uxr"]
+[ext_resource type="Script" uid="uid://c6ls78bbp05u5" path="res://addons/dialogue_nodes/objects/CharacterList.gd" id="1_olqip"]
 [ext_resource type="Resource" uid="uid://da6u1ciuoujk4" path="res://visual/mishamol/mishamol.tres" id="1_xmjp2"]
 
 [resource]
 script = ExtResource("1_olqip")
-characters = Array[Resource("res://addons/dialogue_nodes/objects/Character.gd")]([ExtResource("1_xmjp2")])
+characters = Array[ExtResource("1_l8uxr")]([ExtResource("1_xmjp2")])

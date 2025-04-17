@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://sahjam5ngmdg"]
 
-[ext_resource type="Script" path="res://levels/chapter_1/scripts/level.gd" id="1_7xmqr"]
+[ext_resource type="Script" uid="uid://cixqroo640ybe" path="res://levels/chapter_1/scripts/level.gd" id="1_7xmqr"]
 [ext_resource type="PackedScene" uid="uid://ce8pahnosn5rr" path="res://scripts/managers/game_pause.tscn" id="1_fjmbr"]
 [ext_resource type="PackedScene" uid="uid://cshmhfi1bmqqp" path="res://scripts/managers/game_over.tscn" id="2_woslb"]
 [ext_resource type="PackedScene" uid="uid://l40hahm7j6l" path="res://ui/nodes/gui_game_overlay.tscn" id="4_jio2y"]
@@ -12,10 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://6jmn8a0gpdk2" path="res://visual/entities/plant.png" id="8_odaao"]
 [ext_resource type="Texture2D" uid="uid://b5cvjxixt6li8" path="res://visual/entities/item.png" id="9_lvmth"]
 [ext_resource type="Texture2D" uid="uid://2ttbmgopuocb" path="res://visual/entities/activator.png" id="10_khith"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="11_ljsri"]
+[ext_resource type="Script" uid="uid://bpqo4r0xhqgtu" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="11_ljsri"]
 [ext_resource type="Resource" uid="uid://rxky6x7885xq" path="res://levels/chapter_1/dialogue/level_dialogue.tres" id="13_44wkm"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="13_iqjki"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="14_p7cr8"]
+[ext_resource type="Script" uid="uid://du1cw6gv34oa1" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="13_iqjki"]
+[ext_resource type="Script" uid="uid://byy0jsqwwegq8" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="14_p7cr8"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_0dexg"]
 script = ExtResource("13_iqjki")

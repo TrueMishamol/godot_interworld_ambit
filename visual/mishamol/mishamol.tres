@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://da6u1ciuoujk4"]
 
 [ext_resource type="Texture2D" uid="uid://iuot1edfqabd" path="res://visual/mishamol/Shocked.PNG" id="1_2ynff"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_g2h3v"]
+[ext_resource type="Script" uid="uid://o386047crfwl" path="res://addons/dialogue_nodes/objects/Character.gd" id="1_g2h3v"]
 
 [resource]
 script = ExtResource("1_g2h3v")
